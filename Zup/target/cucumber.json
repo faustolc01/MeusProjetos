@@ -1,0 +1,208 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Desafio Zup - automacao Web  - positivo",
+        "description": "",
+        "id": "testes-automatizados-zup;desafio-zup---automacao-web----positivo;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20532777902,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "O usuario acessa o site de comercio online",
+            "match": {
+              "location": "Steps.abrirNavegadorEacessarOsite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12473686889,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "O usuario pesquisa por um item: \"Impressora HP DeskJet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Impressora HP DeskJet",
+                  "offset": 33
+                }
+              ],
+              "location": "Steps.usuarioPesquisaPorItem(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6110863644,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "O usuario seleciona o item desejado: \"Impressora HP DeskJet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Impressora HP DeskJet",
+                  "offset": 38
+                }
+              ],
+              "location": "Steps.usuarioSelecionaOItemDesejado(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12053775318,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "O usuario adiciona o item \"Impressora HP DeskJet\" no carrinho",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Impressora HP DeskJet",
+                  "offset": 27
+                }
+              ],
+              "location": "Steps.usuarioAdicionaOItemNoCarrinho(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 309304945,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "O usuario valida que o item \"Impressora HP DeskJet\" foi adicionado no carrinho",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Impressora HP DeskJet",
+                  "offset": 29
+                }
+              ],
+              "location": "Steps.usuarioValidaCarrinho(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FeatureTesteZup"
+          },
+          {
+            "line": 5,
+            "name": "@Scenario"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Desafio Zup - automacao Web  - negativo",
+        "description": "",
+        "id": "testes-automatizados-zup;desafio-zup---automacao-web----negativo;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 13955449526,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "O usuario acessa o site de comercio online",
+            "match": {
+              "location": "Steps.abrirNavegadorEacessarOsite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11349209852,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "O usuario pesquisa por um item: \"123testes123abc\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123testes123abc",
+                  "offset": 33
+                }
+              ],
+              "location": "Steps.usuarioPesquisaPorItem(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102413273,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "O resultado da pesquisa nao exibe produtos para o item: \"123testes123abc\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123testes123abc",
+                  "offset": 57
+                }
+              ],
+              "location": "Steps.resultadoPesquisaNaoExibeProdutos(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@FeatureTesteZup"
+          },
+          {
+            "line": 16,
+            "name": "@Scenario"
+          }
+        ]
+      }
+    ],
+    "name": "Testes Automatizados Zup",
+    "description": "Desafio Zup - automacao Web",
+    "id": "testes-automatizados-zup",
+    "keyword": "Feature",
+    "uri": "TesteZup.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@FeatureTesteZup"
+      }
+    ]
+  }
+]
