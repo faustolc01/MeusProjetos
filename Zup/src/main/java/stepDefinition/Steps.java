@@ -1,5 +1,7 @@
 package stepDefinition;
 
+import java.net.MalformedURLException;
+
 import org.junit.After;
 import org.openqa.selenium.WebDriver;
 
@@ -19,8 +21,8 @@ public class Steps{
 	private WebDriver driver;
 	
 	@Given("^O usuario acessa o site de comercio online$")
-	public void abrirNavegadorEacessarOsite() throws InterruptedException {
-		driver = AbrirNavegador.createFirefox();
+	public void abrirNavegadorEacessarOsite() throws InterruptedException, MalformedURLException {
+		driver = AbrirNavegador.createChrome();
 		new PaginaInicial(driver)
 				.acessaSite();			
 	}

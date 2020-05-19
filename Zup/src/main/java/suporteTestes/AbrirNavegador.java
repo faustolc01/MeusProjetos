@@ -1,18 +1,21 @@
 package suporteTestes;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class AbrirNavegador {
 	
 	
-	public static WebDriver createFirefox() {
+	public static WebDriver createChrome() throws MalformedURLException {
 		// Abrir o navegador		
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Fausto\\Documents\\TestesAutomatizados\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		Capabilities chromeCapabilities = DesiredCapabilities.chrome();
+		WebDriver driver = new RemoteWebDriver(new URL("https://localhost:4444/wd/hub"), chromeCapabilities);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
